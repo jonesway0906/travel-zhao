@@ -142,6 +142,7 @@
         title: a.name + (isFree ? '（免费预约）' : ' 门票'),
         sub: a.city + '　' + (a.ticketPrice || ''),
         travelDate: a.date,
+        earliest: a.earliest || null,
         saleDate: a.bookingOpen && /^\d{4}-\d{2}-\d{2}/.test(a.bookingOpen) ? a.bookingOpen.slice(0, 10) : null,
         saleTime: a.bookingOpen && /00:10/.test(a.bookingOpen) ? '00:10' : (a.bookingOpen || '待核实'),
         saleKnown: !!(a.bookingOpen && /^\d{4}-\d{2}-\d{2}/.test(a.bookingOpen)),
@@ -163,6 +164,7 @@
           title: a.name + ' · ' + x.name,
           sub: x.price + (inc ? '（已含在门票内）' : '（需单独购买）'),
           travelDate: a.date,
+          earliest: x.earliest || null,
           saleDate: null,
           saleTime: inc ? '不适用（含在门票内）' : (x.bookingOpen || '待核实'),
           saleKnown: false,
@@ -298,7 +300,7 @@
     /* ---- 关键购票（仅显示还需处理的） ---- */
     var allTickets = buildTickets();
     var tickets = allTickets.filter(function (t) {
-      return t.status !== '不适用' && !/已购买|已购票|已预订/.test(t.status || '');
+      return t.status !== '不适用' && !/已购买|已购票|已预订|已预约/.test(t.status || '');
     });
     var ordered = tickets.slice().sort(function (a, b) {
       var an = a.saleDate ? daysFromToday(a.saleDate) : null;
@@ -327,6 +329,7 @@
           '<div class="body">' +
             '<div class="t">' + esc(t.title) + '</div>' +
             '<div class="s">' + esc(sub) + '</div>' +
+            (t.earliest ? '<div class="s earliest">最早可约 / 可买：' + esc(t.earliest) + '</div>' : '') +
           '</div>' +
         '</div>';
       }).join('');
@@ -516,7 +519,9 @@
         '<div class="di-main"><span class="pill pill-gray">交通</span>' +
         '<div class="di-body"><div class="di-t">' + esc(t.fromStation) + ' → ' + esc(t.toStation) + '</div>' +
         '<div class="di-s">' + esc(t.trainNo || '') + ' · ' + esc(t.depTime || '') + (t.arrTime ? '—' + esc(t.arrTime) : '') +
-        (t.seat ? ' · ' + esc(t.seat) : '') + (t.price != null ? ' · ¥' + t.price : '') + '</div></div>' +
+        (t.seat ? ' · ' + esc(t.seat) : '') + (t.price != null ? ' · ¥' + t.price : '') + '</div>' +
+        (t.saleDate && !/已购买/.test(t.status || '') ? '<div class="di-earliest">最早 ' + esc(fmtDate(t.saleDate)) + ' ' + esc(t.saleTime || '') + ' 起售</div>' : '') +
+        '</div>' +
         statusPill(t.status) + '</div>' +
         '<div class="tk-links">' +
         (t.officialUrl ? '<a href="' + esc(t.officialUrl) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '12306 购票' : '购票 / 查询') + '</a>' : '') +
@@ -535,7 +540,9 @@
       dayTk.push('<div class="day-item">' +
         '<div class="di-main"><span class="pill pill-violet">景点</span>' +
         '<div class="di-body"><div class="di-t">' + esc(a.name) + '</div>' +
-        '<div class="di-s">' + esc(a.ticketPrice || '') + '</div></div>' +
+        '<div class="di-s">' + esc(a.ticketPrice || '') + '</div>' +
+        (a.earliest && !/已购买|已预约|不适用/.test(a.status || '') ? '<div class="di-earliest">最早可约 / 可买：' + esc(a.earliest) + '</div>' : '') +
+        '</div>' +
         statusPill(a.status) + '</div>' + note +
         '<div class="tk-links"><a href="' + esc(a.officialUrl) + '" target="_blank" rel="noopener">官方入口</a>' +
         '<a href="' + MAP.amap(a.name) + '" target="_blank" rel="noopener">地图定位</a></div>' +
