@@ -517,6 +517,45 @@
     }
     p.appendChild(card);
 
+    /* 今日开售 / 放票（按放票日匹配当天） */
+    var todayTickets = buildTickets().filter(function (t) {
+      return t.saleDate === day.date && t.status !== '不适用' &&
+             !/已购买|已购票|已预订|已预约/.test(t.status || '');
+    }).sort(function (a, b) { return (a.saleTime || '') < (b.saleTime || '') ? -1 : 1; });
+    if (todayTickets.length) {
+      var th = '<div class="card-hd"><h2><span class="ico ico-rose">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 6-2.5 7-2.5 7h17S18 14 18 8z"/><path d="M10.3 20a2 2 0 0 0 3.4 0"/></svg>' +
+        '</span>今日开售 / 放票</h2></div>';
+      th += '<p class="card-sub">以下票务今天开放购买或预约，记得按时操作。</p>';
+      th += '<div class="today-tickets">' + todayTickets.map(function (t) {
+        var tm = /^\d{1,2}:\d{2}$/.test(t.saleTime || '') ? t.saleTime : '当日';
+        return '<div class="tt-item">' +
+          '<span class="tt-time">' + esc(tm) + '</span>' +
+          '<span class="tt-name">' + esc(t.title) + '</span>' +
+          statusPill(t.status) +
+        '</div>';
+      }).join('') + '</div>';
+      p.appendChild(el('div', 'card', th));
+    }
+
+    /* 今日门票提醒（参观日）：当天需要门票 / 预约但尚未完成 */
+    var pendingAttr = (day.attractionIds || []).map(findAttraction).filter(function (a) {
+      return a && a.status && /待购买|待预约|待确认|候补/.test(a.status);
+    });
+    if (pendingAttr.length) {
+      var ph = '<div class="card-hd"><h2><span class="ico ico-amber">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9.5v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>' +
+        '</span>今日门票提醒</h2></div>';
+      ph += '<p class="card-sub">以下景点今天要用，但还没买 / 还没约。</p>';
+      ph += '<div class="today-tickets">' + pendingAttr.map(function (a) {
+        return '<div class="tt-item tt-warn">' +
+          '<div class="tt-row1"><span class="tt-name">' + esc(a.name) + '</span>' + statusPill(a.status) + '</div>' +
+          (a.earliest ? '<div class="tt-note">最早可约 / 可买：' + esc(a.earliest) + '</div>' : '') +
+        '</div>';
+      }).join('') + '</div>';
+      p.appendChild(el('div', 'card', ph));
+    }
+
     /* 当天票务与住宿：把购票页 / 住宿页里属于这一天的事合并过来 */
     var dayTk = [];
     (day.transportIds || []).forEach(function (id) {
