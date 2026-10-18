@@ -144,7 +144,13 @@
         travelDate: a.date,
         earliest: a.earliest || null,
         saleDate: a.bookingOpen && /^\d{4}-\d{2}-\d{2}/.test(a.bookingOpen) ? a.bookingOpen.slice(0, 10) : null,
-        saleTime: a.bookingOpen && /00:10/.test(a.bookingOpen) ? '00:10' : (a.bookingOpen || '待核实'),
+        saleTime: (function (bo) {
+          if (!bo) return '待核实';
+          if (/00:10/.test(bo)) return '00:10';
+          var m = bo.match(/^(\d{4}-\d{2}-\d{2})[ 　]*(\d{1,2}:\d{2})?/);
+          if (m) return m[2] || '起';
+          return bo;
+        })(a.bookingOpen),
         saleKnown: !!(a.bookingOpen && /^\d{4}-\d{2}-\d{2}/.test(a.bookingOpen)),
         needReservation: !!a.needReservation,
         status: a.status,
