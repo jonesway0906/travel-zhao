@@ -472,10 +472,11 @@
       if (it.ref) {
         var t = findTransport(it.ref), a = findAttraction(it.ref), hh = findHotel(it.ref);
         if (t) {
-          inner += '<div class="tl-desc">车次 ' + esc(t.trainNo) + ' · ' + esc(t.seat) + ' · ' + (t.price != null ? '¥' + t.price : '金额待确认') +
-                   ' · 开售 ' + esc(fmtDate(t.saleDate)) + ' ' + esc(t.saleTime) + '</div>' +
-                   '<div class="tl-links"><a href="' + esc(t.officialUrl) + '" target="_blank" rel="noopener">12306 购票</a>' +
-                   '<a href="' + MAP.amap(t.fromStation) + '" target="_blank" rel="noopener">出发站定位</a></div>';
+          inner += '<div class="tl-desc">' + (t.type === '火车' ? '车次 ' : '班次 ') + esc(t.trainNo) + ' · ' + esc(t.seat) + ' · ' + (t.price != null ? '¥' + t.price : '金额待确认') +
+                   (t.saleDate ? ' · 开售 ' + esc(fmtDate(t.saleDate)) + ' ' + esc(t.saleTime) : '') + '</div>' +
+                   '<div class="tl-links">' +
+                   (t.officialUrl ? '<a href="' + esc(t.officialUrl) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '12306 购票' : '购票 / 查询') + '</a>' : '') +
+                   '<a href="' + MAP.amap(t.fromStation) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '出发站定位' : '上车点定位') + '</a></div>';
         } else if (a) {
           if (a.closure && a.closure.closed) {
             inner += '<div class="tl-desc closure-note">⛔ ' + esc(a.name) + ' 自 ' + esc(a.closure.from) + ' 起' +
@@ -517,10 +518,11 @@
         '<div class="di-s">' + esc(t.trainNo || '') + ' · ' + esc(t.depTime || '') + (t.arrTime ? '—' + esc(t.arrTime) : '') +
         (t.seat ? ' · ' + esc(t.seat) : '') + (t.price != null ? ' · ¥' + t.price : '') + '</div></div>' +
         statusPill(t.status) + '</div>' +
-        '<div class="tk-links"><a href="' + esc(t.officialUrl) + '" target="_blank" rel="noopener">12306 购票</a>' +
+        '<div class="tk-links">' +
+        (t.officialUrl ? '<a href="' + esc(t.officialUrl) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '12306 购票' : '购票 / 查询') + '</a>' : '') +
         (t.queryUrl ? '<a href="' + esc(t.queryUrl) + '" target="_blank" rel="noopener">车次查询</a>' : '') +
-        '<a href="' + MAP.amap(t.fromStation) + '" target="_blank" rel="noopener">出发站</a>' +
-        '<a href="' + MAP.amap(t.toStation) + '" target="_blank" rel="noopener">到达站</a></div>' +
+        '<a href="' + MAP.amap(t.fromStation) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '出发站' : '上车点') + '</a>' +
+        '<a href="' + MAP.amap(t.toStation) + '" target="_blank" rel="noopener">' + (t.type === '火车' ? '到达站' : '下车点') + '</a></div>' +
       '</div>');
     });
     (day.attractionIds || []).forEach(function (id) {
