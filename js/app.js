@@ -392,6 +392,15 @@
     return String(d.city || '').replace(/（[^）]*）/g, '').split(' → ').pop().trim();
   }
 
+  /* 今天的 dayId（若在行程日期范围内，否则 null） */
+  function todayDayId() {
+    var n = new Date();
+    var m = n.getMonth() + 1, d = n.getDate();
+    var key = n.getFullYear() + '-' + (m < 10 ? '0' + m : m) + '-' + (d < 10 ? '0' + d : d);
+    var hit = DATA.days.filter(function (x) { return x.date === key; })[0];
+    return hit ? hit.id : null;
+  }
+
   function renderDayPanel() {
     var p = $('#dayPanel'); p.innerHTML = '';
 
@@ -1000,8 +1009,21 @@
         });
         $('#icsNote').textContent = '说明：本网站是静态页面，无法在关闭后主动推送手机通知。请使用「购票提醒日历（ICS）」导入系统日历，或使用购票日历清单自行设置提醒。';
         initTabs();
-        var start = (location.hash || '#overview').replace('#', '');
-        showView($('#view-' + start) ? start : 'overview');
+        var start = (location.hash || '').replace('#', '');
+        var todayId = todayDayId();
+        function goToday() {
+          activeDay = todayId;
+          renderDayTabs(); renderDayPanel();
+          showView('daily');
+        }
+        if (!start) {
+          // 首次打开：行程期内直接进入当天
+          if (todayId) goToday(); else showView('overview');
+        } else if (start === 'daily' && todayId) {
+          goToday();
+        } else {
+          showView($('#view-' + start) ? start : 'overview');
+        }
       })
       .catch(function (e) {
         $('#loading').classList.add('hidden');
