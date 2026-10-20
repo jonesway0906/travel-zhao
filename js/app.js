@@ -362,7 +362,7 @@
         '<div class="doc-body">' +
           '<p><b>年份推断：</b>' + esc(m.yearAssumption) + '</p>' +
           (m.closureCheck ? '<p><b>景点开放状态核查：</b>' + esc(m.closureCheck) + '</p>' : '') +
-          '<p><b>天气来源：</b>10/19—10/30 为天气预报（tianqi.com，2026-10-16 查询）；10/31 起超出预报范围，为同期气候参考，出行前请再确认。</p>' +
+          '<p><b>天气来源：</b>中国天气网（中央气象台），2026-10-20 查询。10/19—10/26 为 7 天预报；10/27 起为 8-15 天趋势预报（客观预报产品，不确定性较大，出行前请再确认）。</p>' +
           '<p><b>预售规则：</b>' + esc(m.presaleRule) + '</p>' +
           '<p><b>数据来源：</b>' + esc(m.sourceNote) + '</p>' +
           '<p style="margin:0;color:var(--muted)">最后核实日期：' + esc(m.lastVerified) + '</p>' +
