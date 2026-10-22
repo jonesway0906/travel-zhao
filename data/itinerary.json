@@ -355,19 +355,19 @@
       "presale": "15 天（含当日）",
       "officialUrl": "https://www.12306.cn/index/",
       "prepare": [
-        "保持 12306 候补通知开启",
-        "若候补未兑现，备选：同区间其他车次 / 高铁 / 飞机"
+        "核对 12306 订单中的车厢与铺位",
+        "20:01 发车，建议 19:20 前抵达西安站进站安检"
       ],
-      "reminderDate": "2026-10-19",
-      "reminderTime": "11:25",
-      "status": "候补中",
-      "verifyStatus": "已提交候补，等待兑现",
-      "saleStatus": "已提交候补订单（Z232，11/02 西安站 20:01 开）",
-      "notes": "Z232，西安站 20:01 发车、次日（11/03）09:45 抵达长沙站，历时约 13 小时 44 分。已提交候补订单，尚未兑现；建议同时关注同区间其他车次与机票。",
+      "reminderDate": null,
+      "reminderTime": null,
+      "status": "已购买",
+      "verifyStatus": "已购票",
+      "saleStatus": "已购票（Z232，11/02 西安站 20:01 开）",
+      "notes": "Z232，西安站 20:01 发车、次日（11/03）09:45 抵达长沙站，历时约 13 小时 44 分。候补已兑现，车票已出；席别与铺位以车票为准。",
       "source": {
-        "name": "用户 12306 查询截图",
+        "name": "用户 12306 候补兑现信息",
         "url": "https://www.12306.cn/index/",
-        "date": "2026-10-16"
+        "date": "2026-10-22"
       },
       "arrDate": "2026-11-03"
     }
@@ -724,6 +724,223 @@
         "date": "2026-10-20"
       },
       "earliest": null
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A12",
+      "name": "大雁塔 · 大慈恩寺",
+      "dayId": "day6",
+      "date": "2026-10-24",
+      "suggestArrive": "下午 14:00 前后，游览 + 登塔约 2 小时",
+      "openHours": "08:00—17:30（旺季可能延长，以官方为准）",
+      "ticketPrice": "大慈恩寺门票 40 元/人；登塔另收费（约 30 元）",
+      "planPriceNote": "登塔可选，不登塔只买 40 元门票",
+      "bookingRule": "现场购票为主，也可通过官方公众号预约；旺季建议提前 1 天",
+      "bookingOpen": "可提前 1 天预约（现场也可买票）",
+      "earliest": "提前 1 天可约（现场也可购票）",
+      "officialChannel": "大慈恩寺景区官方渠道 / 现场售票窗口",
+      "officialUrl": "https://www.xiandayanta.com/",
+      "onSiteTicket": "可现场购票",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/23 可预约 10/24 的门票",
+      "notes": "大雁塔在慈恩寺内，是玄奘译经处。登塔需另购票，视野好但台阶陡。",
+      "source": {
+        "name": "西安本地宝 2026 景点预约攻略",
+        "url": "https://xa.bendibao.com/",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A13",
+      "name": "西安城墙（永宁门）",
+      "dayId": "day7",
+      "date": "2026-10-25",
+      "suggestArrive": "上午 09:00 从永宁门登城，租自行车环城约 2 小时",
+      "openHours": "08:00—22:00（各门点略有差异）",
+      "ticketPrice": "54 元/人；自行车租赁另收费（单人车约 45 元/2 小时）",
+      "planPriceNote": "门票 54 元 + 租车约 45 元",
+      "bookingRule": "微信公众号「西安城墙景区」/ 小程序「遇见城墙百宝箱」预约购票；自 2026-07-01 起刷身份证或人脸识别入园，不再用电子二维码",
+      "bookingOpen": "随时可预约（现场也可扫码购票）",
+      "earliest": "随时可预约（建议提前 1 天，现场也可扫码）",
+      "officialChannel": "微信公众号「西安城墙景区」/ 小程序「遇见城墙百宝箱」",
+      "officialUrl": "http://www.xacitywall.com/",
+      "onSiteTicket": "现场可扫码购票，但需刷身份证入园",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/24 可预约 10/25 的门票",
+      "notes": "城墙周长 13.74 公里，是国内保存最完整的古代城垣。永宁门（南门）是最热门的登城点。",
+      "source": {
+        "name": "西安城墙景区官网 / 西安本地宝",
+        "url": "http://www.xacitywall.com/",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A14",
+      "name": "钟楼 + 鼓楼",
+      "dayId": "day7",
+      "date": "2026-10-25",
+      "suggestArrive": "下午 13:30 前后，登楼各约 40 分钟",
+      "openHours": "08:30—21:00（旺季延长）",
+      "ticketPrice": "钟鼓楼联票 50 元/人；单买各 30 元",
+      "planPriceNote": "联票 50 元更划算",
+      "bookingRule": "微信小程序「西安钟鼓楼」购票；可提前 3 天预约，人流大但极少约满",
+      "bookingOpen": "可提前 3 天预约",
+      "earliest": "提前 3 天可约（一般前一晚买次日票即可）",
+      "officialChannel": "微信小程序「西安钟鼓楼」",
+      "officialUrl": "https://www.xazgl.com/",
+      "onSiteTicket": "可现场购票",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/22 起可预约 10/25 的门票",
+      "notes": "钟楼是西安的地理中心，四面正对东西南北大街；鼓楼上有鼓文化展。两楼相距约 200 米。",
+      "source": {
+        "name": "西安本地宝 2026 景点预约攻略",
+        "url": "https://xa.bendibao.com/",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A15",
+      "name": "西安碑林博物馆",
+      "dayId": "day13",
+      "date": "2026-10-31",
+      "suggestArrive": "上午 09:00 入馆，游览约 2 小时",
+      "openHours": "08:00—18:00（17:15 停止入馆）",
+      "ticketPrice": "85 元/人（全票，不分淡旺季）；半票 42 元",
+      "planPriceNote": "官网公示全票 85 元（此前误记为 65 元）",
+      "bookingRule": "微信公众号「西安碑林博物馆」预约购票；可提前 5 天预约，平日不紧张，节假日建议提前 1—2 天",
+      "bookingOpen": "可提前 5 天预约",
+      "earliest": "提前 5 天可约（10/26 起可约 10/31）",
+      "officialChannel": "微信公众号「西安碑林博物馆」",
+      "officialUrl": "https://www.beilin-museum.com/",
+      "onSiteTicket": "需预约，节假日不接受现场排队购票",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/26 起可预约 10/31 的门票",
+      "notes": "中国最大的石碑博物馆，《开成石经》《大秦景教碑》都在这里；旁边就是书院门。",
+      "source": {
+        "name": "西安碑林博物馆官网 参观指南",
+        "url": "https://www.beilin-museum.com/index.php?m=home&c=Lists&a=index&tid=68",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A16",
+      "name": "《长恨歌》实景演出（华清宫）",
+      "dayId": "day13",
+      "date": "2026-10-31",
+      "suggestArrive": "18:00 从西北工业大学友谊校区统一出发，19:10 到场取票",
+      "openHours": "演出场次以官方为准（2026 年常见 19:40 / 21:05 / 22:30 / 23:55）",
+      "ticketPrice": "约 199—988 元/人（不同区域与场次差异大）",
+      "planPriceNote": "基础票通常 199—298 元起，中区更贵",
+      "bookingRule": "微信公众号「华清宫景区」→ 微商城 → 演出预定；预售提前 9—10 天，每天 9:30 放票；实名制，须填观演人身份证号",
+      "bookingOpen": "2026-10-21/22 起已可购买 10/31 场次（提前 9—10 天）",
+      "earliest": "现在即可购买（提前 9—10 天，每天 9:30 放票）",
+      "officialChannel": "微信公众号「华清宫景区」/ 小程序",
+      "officialUrl": "https://www.hqc.cn/",
+      "onSiteTicket": "旺季现场大概率无余票，不建议临时到场",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "现在就该买 10/31 场次，旺季热门场次当天售罄",
+      "notes": "⚠️ 周五/周六只能 18:00 从西北工业大学友谊校区统一出发。实名制，凭身份证取票入场；1.3 米以下儿童不占座免票。",
+      "source": {
+        "name": "华清宫景区 / 西安本地宝 2026 长恨歌购票指南",
+        "url": "https://xa.bendibao.com/xiuxian/2026129/147728.shtm",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": "2026-10-25",
+      "id": "A17",
+      "name": "秦始皇兵马俑博物馆",
+      "dayId": "day14",
+      "date": "2026-11-01",
+      "suggestArrive": "上午 09:30 入馆，游览约 3 小时",
+      "openHours": "08:30—18:00（旺季 08:00 开馆，以官方为准）",
+      "ticketPrice": "120 元/人（含秦始皇兵马俑博物馆 + 丽山园，两处间有免费摆渡车）",
+      "planPriceNote": "120 元含丽山园，建议一并去",
+      "bookingRule": "秦始皇帝陵博物院**实名制分时预约**，景区**无现场售票窗口**；官方渠道：官网 bmy.com.cn 或微信公众号；**可提前 7 天预约**，旺季建议准点抢",
+      "bookingOpen": "2026-10-25 起可预约 11/1 的门票（提前 7 天）",
+      "earliest": "2026-10-25 起（提前 7 天，无现场售票）",
+      "officialChannel": "秦始皇帝陵博物院官网 / 微信公众号",
+      "officialUrl": "https://www.bmy.com.cn/",
+      "onSiteTicket": "⛔ 无现场售票窗口，未预约无法入园",
+      "status": "待预约",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/25 起预约 11/1 的兵马俑门票（提前 7 天，无现场售票）",
+      "notes": "⚠️ 必须提前实名预约，现场没有售票窗口。建议请讲解（约 100 元/场）或租讲解器，否则很难看懂。",
+      "source": {
+        "name": "秦始皇帝陵博物院官网",
+        "url": "https://www.bmy.com.cn/",
+        "date": "2026-10-22"
+      }
+    },
+    {
+      "city": "西安",
+      "planPrice": null,
+      "extraTransports": [],
+      "needReservation": true,
+      "idRequired": true,
+      "reminderDate": null,
+      "id": "A18",
+      "name": "华清宫（骊山 / 唐华清宫遗址）",
+      "dayId": "day14",
+      "date": "2026-11-01",
+      "suggestArrive": "下午 14:00 前后（可选，昨晚已看长恨歌的话可跳过）",
+      "openHours": "07:00—18:00（旺季延长）",
+      "ticketPrice": "120 元/人（骊山索道另收费）",
+      "planPriceNote": "可选项目，与兵马俑同在临潼",
+      "bookingRule": "微信公众号「华清宫景区」预约购票；需提前 1 天预约，旺季建议提前",
+      "bookingOpen": "可提前 1 天预约",
+      "earliest": "提前 1 天可约（10/31 起可约 11/1）",
+      "officialChannel": "微信公众号「华清宫景区」",
+      "officialUrl": "https://www.hqc.cn/",
+      "onSiteTicket": "可现场购票，旺季建议线上预约",
+      "status": "待购买",
+      "verifyStatus": "规则已核实",
+      "reminderNote": "10/31 可预约 11/1 的门票",
+      "notes": "唐玄宗与杨贵妃的温泉行宫，西安事变旧址五间厅也在这里。10/31 晚上已来看长恨歌，白天是否再进景区可自行取舍。",
+      "source": {
+        "name": "华清宫景区官方渠道",
+        "url": "https://www.hqc.cn/",
+        "date": "2026-10-22"
+      }
     }
   ],
   "hotels": [
@@ -1330,7 +1547,7 @@
       "weekday": "周六",
       "city": "洛阳 → 西安",
       "theme": "抵达西安 · 陕西历史博物馆",
-      "advice": "01:40 退房前往洛阳站，乘 Z273（02:29）赴西安，06:58 抵达。先到酒店寄存行李，10:30 按预约场次入陕历博（10:30—12:30），下午自由活动。",
+      "advice": "06:58 抵达西安站，先到酒店寄存行李。10:30 按预约场次入陕历博（10:30—12:30）。下午步行去大雁塔，傍晚沿大唐不夜城往南逛。",
       "weather": {
         "cond": "阴转多云",
         "temp": "12~17℃",
@@ -1345,7 +1562,8 @@
         "T3"
       ],
       "attractionIds": [
-        "A11"
+        "A11",
+        "A12"
       ],
       "todoIds": [],
       "items": [
@@ -1407,15 +1625,29 @@
         },
         {
           "time": "14:00",
+          "type": "attraction",
+          "title": "大雁塔 · 大慈恩寺（登塔 40 元）",
+          "desc": "陕历博步行约 15 分钟即到；大雁塔是玄奘译经处，登塔可俯瞰城南",
+          "ref": null
+        },
+        {
+          "time": "16:00",
           "type": "rest",
-          "title": "下午自由活动",
-          "desc": "可逛大雁塔、大唐不夜城、小寨商圈",
+          "title": "大雁塔北广场 · 音乐喷泉",
+          "desc": "亚洲最大的音乐喷泉广场，白天也有表演；往南步行即是大唐不夜城",
+          "ref": null
+        },
+        {
+          "time": "17:30",
+          "type": "rest",
+          "title": "大唐不夜城（白天场）",
+          "desc": "从北广场向南一路逛，白天人少好拍照；夜景留到 10/30 晚上再看",
           "ref": null
         },
         {
           "time": "18:00",
           "type": "meal",
-          "title": "晚餐",
+          "title": "晚餐（大唐不夜城 / 大雁塔一带）",
           "desc": "",
           "ref": null
         },
@@ -1441,7 +1673,7 @@
       "weekday": "周日",
       "city": "西安",
       "theme": "西安自由行 · 夜间出发去张掖",
-      "advice": "白天西安自由活动，可安排兵马俑或城墙、回民街。当天有小雨，建议以室内为主。T269 已出票 —— 21:00 前往西安站，22:00 发车。",
+      "advice": "白天在市区：上午城墙骑行，中午书院门，下午钟楼鼓楼 + 洒金桥。⚠️ 今晚 22:00 火车去张掖，17:00 要回酒店取行李，21:00 到西安站。",
       "weather": {
         "cond": "小雨",
         "temp": "12~17℃",
@@ -1450,33 +1682,78 @@
       "gear": "小雨 12~17℃，带伞；晚上 22:00 上火车，夜车备薄毯、眼罩与颈枕。",
       "wakeUp": "07:30",
       "breakfast": "酒店 / 西安",
-      "checkout": "12:00",
+      "checkout": "08:00（行李寄存前台）",
       "hotelId": null,
       "transportIds": [
         "T4"
       ],
-      "attractionIds": [],
+      "attractionIds": [
+        "A13",
+        "A14"
+      ],
       "todoIds": [],
       "items": [
         {
           "time": "07:30",
           "type": "meal",
-          "title": "早餐",
+          "title": "早餐（酒店）",
           "desc": "",
           "ref": null
         },
         {
+          "time": "08:00",
+          "type": "hotel",
+          "title": "退房并寄存行李",
+          "desc": "今晚 22:00 火车，行李寄存前台，傍晚回来取",
+          "ref": "H3"
+        },
+        {
+          "time": "08:30",
+          "type": "transport",
+          "title": "前往永宁门（西安城墙南门）",
+          "desc": "高新二路至永宁门约 9 公里，地铁或打车约 30 分钟",
+          "ref": null
+        },
+        {
           "time": "09:00",
-          "type": "rest",
-          "title": "西安自由活动",
-          "desc": "手写计划未指定具体景点；可安排兵马俑、陕西历史博物馆（需提前预约）等",
+          "type": "attraction",
+          "title": "西安城墙（永宁门登城，租自行车环城）",
+          "desc": "城墙全长 13.7 公里，租自行车骑行一圈约 1.5—2 小时；门票 54 元",
+          "ref": null
+        },
+        {
+          "time": "11:30",
+          "type": "attraction",
+          "title": "下城墙，逛书院门 / 碑林博物馆",
+          "desc": "书院门是书法字画一条街，碑林门票 65 元（可选）",
           "ref": null
         },
         {
           "time": "12:00",
           "type": "meal",
-          "title": "午餐",
+          "title": "午餐（书院门 / 钟楼一带）",
           "desc": "",
+          "ref": null
+        },
+        {
+          "time": "13:30",
+          "type": "attraction",
+          "title": "钟楼 + 鼓楼（登楼）",
+          "desc": "钟鼓楼联票 50 元；钟楼是西安的地理中心，四面正对东西南北大街",
+          "ref": null
+        },
+        {
+          "time": "15:30",
+          "type": "rest",
+          "title": "回民街 / 洒金桥（小吃 + 伴手礼）",
+          "desc": "本地人更常去洒金桥，价低味正；回民街主街可看热闹",
+          "ref": null
+        },
+        {
+          "time": "17:00",
+          "type": "transport",
+          "title": "回酒店取行李",
+          "desc": "高新二路门店，取完行李再回市区",
           "ref": null
         },
         {
@@ -1931,6 +2208,13 @@
           "ref": null
         },
         {
+          "time": "17:30",
+          "type": "rest",
+          "title": "大唐不夜城（夜景）",
+          "desc": "画画就在长安十二时辰主题街区，出来直接逛；灯光、NPC 巡游、街头表演都在晚上",
+          "ref": null
+        },
+        {
           "time": "18:00",
           "type": "meal",
           "title": "晚餐（大唐不夜城一带）",
@@ -1958,8 +2242,8 @@
       "date": "2026-10-31",
       "weekday": "周六",
       "city": "西安",
-      "theme": "西安自由行",
-      "advice": "西安自由活动。若去兵马俑，建议早出发，往返加游览需一整天；也可安排华清宫。",
+      "theme": "碑林 · 永兴坊 · 长恨歌",
+      "advice": "白天市区轻松逛（碑林 + 永兴坊），下午回酒店休息。⚠️ 晚上《长恨歌》只能在 18:00 从西北工业大学友谊校区统一出发，16:30 就要往那边走。",
       "weather": {
         "cond": "雨转阴",
         "temp": "6~12℃",
@@ -1971,34 +2255,95 @@
       "checkout": "—",
       "hotelId": "H6",
       "transportIds": [],
-      "attractionIds": [],
-      "todoIds": [],
+      "attractionIds": [
+        "A15",
+        "A16"
+      ],
+      "todoIds": [
+        "todo-x6"
+      ],
       "items": [
         {
+          "time": "08:00",
+          "type": "meal",
+          "title": "早餐（酒店）",
+          "desc": "",
+          "ref": null
+        },
+        {
           "time": "09:00",
+          "type": "attraction",
+          "title": "碑林博物馆 + 书院门",
+          "desc": "碑林门票 65 元，看《开成石经》《大秦景教碑》；书院门是书法字画一条街",
+          "ref": null
+        },
+        {
+          "time": "11:30",
           "type": "rest",
-          "title": "西安自由活动",
-          "desc": "手写计划未指定具体景点；可安排兵马俑、城墙、大雁塔、回民街等",
+          "title": "永兴坊（陕西小吃集合）",
+          "desc": "陕西各地小吃一站吃遍，摔碗酒 5 元；比回民街更小众、少商业化",
           "ref": null
         },
         {
           "time": "12:00",
           "type": "meal",
-          "title": "午餐",
-          "desc": "",
+          "title": "午餐（永兴坊）",
+          "desc": "biangbiang 面、油泼面、臊子面都在 15—20 元",
+          "ref": null
+        },
+        {
+          "time": "14:00",
+          "type": "rest",
+          "title": "回酒店休息",
+          "desc": "晚上要看演出到 21:00，下午留时间歇一歇",
+          "ref": null
+        },
+        {
+          "time": "16:30",
+          "type": "transport",
+          "title": "前往西北工业大学友谊校区",
+          "desc": "大唐西市至友谊校区约 5 公里，打车 20 分钟；这是长恨歌的指定集合点",
+          "ref": null
+        },
+        {
+          "time": "17:00",
+          "type": "meal",
+          "title": "晚餐（友谊校区附近，简单吃）",
+          "desc": "18:00 要发车，别吃太饱太慢",
           "ref": null
         },
         {
           "time": "18:00",
-          "type": "meal",
-          "title": "晚餐",
-          "desc": "",
+          "type": "transport",
+          "title": "从西北工业大学友谊校区出发 → 华清宫",
+          "desc": "⚠️ 周五/周六只能 18:00 从这里统一出发；车程约 1 小时",
+          "ref": null
+        },
+        {
+          "time": "19:10",
+          "type": "transport",
+          "title": "抵达华清宫，取票入场",
+          "desc": "凭身份证取票，按座位号入座",
+          "ref": null
+        },
+        {
+          "time": "19:30",
+          "type": "attraction",
+          "title": "《长恨歌》实景演出（约 70 分钟）",
+          "desc": "华清宫九龙湖畔的山水实景演出，以骊山为背景；场次时间以官方为准",
           "ref": null
         },
         {
           "time": "21:00",
+          "type": "transport",
+          "title": "返回西安市区",
+          "desc": "随车返回，约 1 小时",
+          "ref": null
+        },
+        {
+          "time": "22:00",
           "type": "hotel",
-          "title": "续住 如家商旅（金标）西安钟楼西北工业大学大唐西市地铁站店",
+          "title": "回到酒店 如家商旅（金标）大唐西市店",
           "desc": "第 2 晚（共 3 晚）",
           "ref": "H6"
         }
@@ -2016,8 +2361,8 @@
       "date": "2026-11-01",
       "weekday": "周日",
       "city": "西安",
-      "theme": "西安自由行",
-      "advice": "西安自由活动，可安排城墙骑行、碑林、回民街。今晚确认 11/2 返程 Z232 车票与退房时间。",
+      "theme": "兵马俑",
+      "advice": "兵马俑在临潼，往返加游览要一整天，建议 08:00 就出发。华清宫可选 —— 昨晚已看过长恨歌的话，可以直接返程休息。",
       "weather": {
         "cond": "晴转阴",
         "temp": "5~13℃",
@@ -2029,20 +2374,60 @@
       "checkout": "—",
       "hotelId": "H6",
       "transportIds": [],
-      "attractionIds": [],
-      "todoIds": [],
+      "attractionIds": [
+        "A17",
+        "A18"
+      ],
+      "todoIds": [
+        "todo-x7"
+      ],
       "items": [
         {
-          "time": "09:00",
-          "type": "rest",
-          "title": "西安自由活动",
-          "desc": "手写计划未指定具体景点",
+          "time": "07:30",
+          "type": "meal",
+          "title": "早餐（酒店）",
+          "desc": "",
           "ref": null
         },
         {
-          "time": "12:00",
+          "time": "08:00",
+          "type": "transport",
+          "title": "出发前往兵马俑",
+          "desc": "地铁 9 号线至华清池站转公交，或打车约 1 小时；建议早点走避开人流",
+          "ref": null
+        },
+        {
+          "time": "09:30",
+          "type": "attraction",
+          "title": "秦始皇兵马俑博物馆（门票 120 元）",
+          "desc": "一、二、三号坑 + 铜车马；建议请讲解（约 100 元/场）或租讲解器，不然看不懂",
+          "ref": null
+        },
+        {
+          "time": "12:30",
           "type": "meal",
-          "title": "午餐",
+          "title": "午餐（临潼）",
+          "desc": "临潼石榴汁、油泼驴蹄子面都是本地特色",
+          "ref": null
+        },
+        {
+          "time": "14:00",
+          "type": "attraction",
+          "title": "可选：华清宫（骊山 / 唐华清宫遗址）",
+          "desc": "门票 120 元；如果昨晚已看过长恨歌、不想再进，可直接返程",
+          "ref": null
+        },
+        {
+          "time": "16:00",
+          "type": "transport",
+          "title": "返回西安市区",
+          "desc": "车程约 1 小时",
+          "ref": null
+        },
+        {
+          "time": "17:30",
+          "type": "rest",
+          "title": "回到酒店休息",
           "desc": "",
           "ref": null
         },
@@ -2056,7 +2441,7 @@
         {
           "time": "21:00",
           "type": "hotel",
-          "title": "续住 如家商旅（金标）西安钟楼西北工业大学大唐西市地铁站店",
+          "title": "续住 如家商旅（金标）大唐西市店",
           "desc": "第 3 晚（共 3 晚）；明日退房返程",
           "ref": "H6"
         }
@@ -2074,8 +2459,8 @@
       "date": "2026-11-02",
       "weekday": "周一",
       "city": "西安 → 长沙",
-      "theme": "返程 · Z232 西安 → 长沙",
-      "advice": "白天在西安休整或自由活动，12:00 前退房（可寄存行李）。20:01 乘 Z232 从西安站出发，次日 09:45 抵达长沙站。⚠️ 该车票 10/19 11:30 开售，记得及时购买。",
+      "theme": "长安校区 · 返程 · Z232",
+      "advice": "上午去西北工业大学长安校区（备选项目，单程约 1 小时），下午回市区取行李、买伴手礼，18:00 提前吃晚饭，19:00 去西安站。",
       "weather": {
         "cond": "晴转阴",
         "temp": "7~14℃",
@@ -2090,22 +2475,62 @@
         "T7"
       ],
       "attractionIds": [],
-      "todoIds": [
-        "todo-t7"
-      ],
+      "todoIds": [],
       "items": [
         {
           "time": "08:00",
           "type": "meal",
-          "title": "早餐 · 退房准备",
-          "desc": "如家商旅（金标）西安钟楼西北工业大学大唐西市地铁站店退房，可寄存行李",
+          "title": "早餐 · 退房",
+          "desc": "退房后行李寄存前台，晚上回来取",
           "ref": "H6"
+        },
+        {
+          "time": "09:00",
+          "type": "transport",
+          "title": "前往西北工业大学长安校区",
+          "desc": "大唐西市至长安校区约 30 公里，地铁 2 号线转公交或打车约 1 小时",
+          "ref": null
+        },
+        {
+          "time": "10:30",
+          "type": "rest",
+          "title": "长安校区校园漫步",
+          "desc": "新校区面积大、建筑现代，可看看图书馆与启真湖一带",
+          "ref": null
         },
         {
           "time": "12:00",
           "type": "meal",
-          "title": "午餐",
+          "title": "午餐（长安校区 / 返回市区途中）",
           "desc": "",
+          "ref": null
+        },
+        {
+          "time": "13:30",
+          "type": "transport",
+          "title": "返回市区",
+          "desc": "车程约 1 小时",
+          "ref": null
+        },
+        {
+          "time": "14:30",
+          "type": "hotel",
+          "title": "回酒店取行李",
+          "desc": "",
+          "ref": "H6"
+        },
+        {
+          "time": "15:00",
+          "type": "rest",
+          "title": "洒金桥 / 回民街 买伴手礼",
+          "desc": "腊牛肉、黄桂柿子饼、石子馍都耐放；避开景区真空包装的高价货",
+          "ref": null
+        },
+        {
+          "time": "18:00",
+          "type": "meal",
+          "title": "晚餐（提前吃）",
+          "desc": "20:01 的车，18:00 吃完再从容去车站",
           "ref": null
         },
         {
@@ -2132,15 +2557,6 @@
     }
   ],
   "todos": [
-    {
-      "id": "todo-t7",
-      "category": "交通",
-      "dayId": "day15",
-      "date": "2026-11-02",
-      "title": "购买 西安 → 长沙 返程票（Z232，11/02 20:01 开，¥156.5 起）",
-      "due": "2026-10-19 11:30 开售",
-      "status": "待完成"
-    },
     {
       "id": "todo-a4bus",
       "category": "观光车",
@@ -2256,6 +2672,24 @@
       "date": "2026-10-23",
       "title": "与洛阳酒店确认 10/24 凌晨 01:40 退房，并提前安排夜间叫车去洛阳站",
       "due": "2026-10-22",
+      "status": "待完成"
+    },
+    {
+      "id": "todo-x6",
+      "category": "演出票",
+      "dayId": "day13",
+      "date": "2026-10-31",
+      "title": "购买《长恨歌》演出票（10/31 场次，华清宫）",
+      "due": "现在就该买（提前 9—10 天，每天 9:30 放票）",
+      "status": "待完成"
+    },
+    {
+      "id": "todo-x7",
+      "category": "景点预约",
+      "dayId": "day14",
+      "date": "2026-11-01",
+      "title": "预约 秦始皇兵马俑博物馆 门票（120 元，提前 7 天）",
+      "due": "2026-10-25 起（提前 7 天，无现场售票）",
       "status": "待完成"
     }
   ],
