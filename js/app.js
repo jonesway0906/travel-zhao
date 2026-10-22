@@ -175,7 +175,7 @@
           saleTime: inc ? '不适用（含在门票内）' : (x.bookingOpen || '待核实'),
           saleKnown: false,
           needReservation: !inc,
-          status: inc ? '不适用' : (a.status === '不适用' ? '不适用' : '待购买'),
+          status: inc ? '不适用' : (x.status || (a.status === '不适用' ? '不适用' : '待购买')),
           verifyStatus: x.bookingOpen && x.bookingOpen.indexOf('待核实') < 0 ? '规则已核实' : '待官方确认',
           officialUrl: x.officialUrl || a.officialUrl,
           extraUrls: [],
